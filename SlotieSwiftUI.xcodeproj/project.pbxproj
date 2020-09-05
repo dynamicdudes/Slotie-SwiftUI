@@ -13,6 +13,7 @@
 		883D5BC22503862300FC84A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883D5BC12503862300FC84A4 /* Assets.xcassets */; };
 		883D5BC52503862300FC84A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883D5BC42503862300FC84A4 /* Preview Assets.xcassets */; };
 		883D5BC82503862300FC84A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883D5BC62503862300FC84A4 /* LaunchScreen.storyboard */; };
+		8881A815250394FE00F0D154 /* SingleSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881A814250394FE00F0D154 /* SingleSlot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		883D5BC42503862300FC84A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		883D5BC72503862300FC84A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		883D5BC92503862300FC84A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8881A814250394FE00F0D154 /* SingleSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSlot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				883D5BBB2503861C00FC84A4 /* AppDelegate.swift */,
 				883D5BBD2503861C00FC84A4 /* SceneDelegate.swift */,
 				883D5BBF2503861C00FC84A4 /* ContentView.swift */,
+				8881A814250394FE00F0D154 /* SingleSlot.swift */,
 				883D5BC12503862300FC84A4 /* Assets.xcassets */,
 				883D5BC62503862300FC84A4 /* LaunchScreen.storyboard */,
 				883D5BC92503862300FC84A4 /* Info.plist */,
@@ -149,6 +152,7 @@
 				883D5BBC2503861C00FC84A4 /* AppDelegate.swift in Sources */,
 				883D5BBE2503861C00FC84A4 /* SceneDelegate.swift in Sources */,
 				883D5BC02503861C00FC84A4 /* ContentView.swift in Sources */,
+				8881A815250394FE00F0D154 /* SingleSlot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

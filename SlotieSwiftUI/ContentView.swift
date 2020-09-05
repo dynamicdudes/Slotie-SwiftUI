@@ -10,9 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private var symbols = ["apple","strawberry","orange"]
+    @State private var symbols = ["apple","strawberry","orange"]
     @State private var index = [1,2,0]
     @State private var credit = 1000
+    @State private var colorsArray = [Color.white,Color.white,Color.white]
     @State private var betAmmout = 5
     
     var body: some View {
@@ -53,26 +54,10 @@ struct ContentView: View {
                 HStack{
                     
                     Spacer()
-                    Image(symbols[index[0]])
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding(.all, 10)
-                        .background(Color(.white).opacity(0.5))
-                        .cornerRadius(20)
                     
-                    Image(symbols[index[1]])
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding(.all, 10)
-                        .background(Color(.white).opacity(0.5))
-                        .cornerRadius(20)
-                    
-                    Image(symbols[index[2]])
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding(.all, 10)
-                        .background(Color(.white).opacity(0.5))
-                        .cornerRadius(20)
+                    SingleSlot(imageView: $symbols[index[0]],backgroundColor: $colorsArray[0])
+                    SingleSlot(imageView: $symbols[index[1]], backgroundColor: $colorsArray[1])
+                    SingleSlot(imageView: $symbols[index[2]], backgroundColor: $colorsArray[2])
                     
                     Spacer()
                     
@@ -81,15 +66,29 @@ struct ContentView: View {
                 Spacer()
                 //Button
                 Button(action: {
-                    self.index[0] = Int.random(in: 0...self.symbols.count - 1)
-                    self.index[1] = Int.random(in: 0...self.symbols.count - 1)
-                    self.index[2] = Int.random(in: 0...self.symbols.count - 1)
+                    //Initial Stage Card Color
+                    self.colorsArray = self.colorsArray.map({ _ in
+                        Color.white
+                    })
+                    
+                    self.index = self.index.map({ _  in
+                        Int.random(in : 0...self.symbols.count - 1)
+                    })
+                    
                     
                     if self.index[0] == self.index[1] && self.index[1] == self.index[2] {
-                        self.credit += self.betAmmout * 10
-                    }
                         
+                        //Won..
+                        self.credit += self.betAmmout * 10
+                        
+                        self.colorsArray = self.colorsArray.map({ _  in
+                            Color.green
+                        })
+                        
+                    }
                     else{
+                        
+                        //Lost
                         self.credit -= self.betAmmout
                     }
                 }) {
